@@ -1,0 +1,50 @@
+#main-container {
+    height: 50vh;
+    margin-left: 6.25vw;
+    margin-right: 6.25vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-top: 25vh;
+}
+
+.project-card {
+    max-width: 400px;
+}
+
+div[mat-card-avatar] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: lightskyblue;
+}
+
+img[mat-card-image] {
+    cursor: pointer;
+    height: 200px;
+}
+
+mat-card-content {
+    height: 115px;
+}
+
+@media only screen and (max-width: 600px) {
+    mat-card-content {
+        height: auto;
+    }
+
+    img[mat-card-image] {
+        height: auto;
+    }
+
+    .project-card {
+        margin: 10px;
+    }
+    #main-container {
+        margin-top: 0px;
+    }
+}

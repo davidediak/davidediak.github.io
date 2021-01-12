@@ -1,0 +1,59 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #sidenav
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="'navigation'"
+    [mode]="'side'"
+    [opened]="true"
+  >
+    <mat-nav-list>
+      <a
+        mat-list-item
+        routerLink="/"
+        matTooltipClass="largerTooltip"
+        matTooltip="About"
+        matTooltipPosition="right"
+      >
+        <i class="fas fa-user-astronaut"></i>
+      </a>
+      <a
+        mat-list-item
+        routerLink="/skills"
+        matTooltipClass="largerTooltip"
+        matTooltip="Skills"
+        matTooltipPosition="right"
+      >
+        <i class="fas fa-code"></i>
+      </a>
+      <a
+        mat-list-item
+        routerLink="/portfolio"
+        matTooltipClass="largerTooltip"
+        matTooltip="Portfolio"
+        matTooltipPosition="right"
+      >
+        <i class="far fa-folder-open"></i>
+      </a>
+      <a
+        mat-list-item
+        routerLink="/socials"
+        matTooltipClass="largerTooltip"
+        matTooltip="Socials"
+        matTooltipPosition="right"
+      >
+        <i class="fas fa-share-alt-square"></i>
+      </a>
+      <a
+        mat-list-item
+        routerLink="/movies"
+        matTooltipClass="largerTooltip"
+        matTooltip="Movies"
+        matTooltipPosition="right"
+      >
+        <i class="fas fa-film"></i>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <ng-content></ng-content>
+</mat-sidenav-container>

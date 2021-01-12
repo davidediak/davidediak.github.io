@@ -1,0 +1,46 @@
+<div id="main-container">
+  <mat-card class="skill-group">
+    <div class="skill-group-title">
+      <h3>Frontend</h3>
+    </div>
+    <div class="skill-list">
+      <ng-container *ngFor="let skill of frontendSkills">
+        <div class="skill-icon-container" [matTooltip]="skill.tooltipValue">
+          <div>
+            <i [class]="'devicon-' + skill.className + '-plain colored'"></i>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </mat-card>
+
+  <mat-card class="skill-group">
+    <div class="skill-group-title">
+      <h3>Backend</h3>
+    </div>
+    <div class="skill-list">
+      <ng-container *ngFor="let skill of backendSkills">
+        <div class="skill-icon-container" [matTooltip]="skill.tooltipValue">
+          <div>
+            <i [class]="'devicon-' + skill.className + '-plain colored'"></i>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </mat-card>
+
+  <mat-card class="skill-group">
+    <div class="skill-group-title">
+      <h3>Tools</h3>
+    </div>
+    <div class="skill-list">
+      <ng-container *ngFor="let skill of toolsSkills">
+        <div class="skill-icon-container" [matTooltip]="skill.tooltipValue">
+          <div>
+            <i [class]="'devicon-' + skill.className + '-plain colored'"></i>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </mat-card>
+</div>

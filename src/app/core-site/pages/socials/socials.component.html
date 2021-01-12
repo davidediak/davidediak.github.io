@@ -1,0 +1,31 @@
+<div id="main-container">
+  <ng-container *ngFor="let social of socials">
+    <ng-container *ngIf="!social.isCustom; else customBlock">
+      <div class="social-item">
+        <a
+          mat-list-item
+          [href]="social.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          matTooltipClass="largerTooltip"
+          [matTooltip]="social.tooltipValue"
+          matTooltipPosition="below"
+        >
+          <i [class]="social.classValue"></i>
+        </a>
+      </div>
+    </ng-container>
+    <ng-template #customBlock>
+      <div class="social-item" style="text-align: center;">
+        <i
+          mat-list-item
+          [class]="social.classValue"
+          matTooltipClass="largerTooltip"
+          [matTooltip]="social.tooltipValue"
+          matTooltipPosition="below"
+          (click)="copyToClipboard(social.link)"
+        ></i>
+      </div>
+    </ng-template>
+  </ng-container>
+</div>
