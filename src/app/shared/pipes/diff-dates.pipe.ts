@@ -7,10 +7,10 @@ export class DiffDatesPipe implements PipeTransform {
     transform(date: Date): string {
         const dateLuxon = DateTime.fromJSDate(date);
         const today = DateTime.fromJSDate(new Date());
-        const diffDuration = dateLuxon.diff(today, ['years', 'months']);
+        const diffDuration = today.diff(dateLuxon, ['years', 'months']);
 
         const years = diffDuration.years;
-        const months = diffDuration.months;
+        const months = Math.ceil(diffDuration.months);
 
         const yearSubstring = `${years} years`;
         let monthSubstring = '';
